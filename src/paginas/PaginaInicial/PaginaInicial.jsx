@@ -1,4 +1,5 @@
 import BotaoCustomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
+import OlaMundo from "../../componentes/OlaMundo/OlaMundo";
 import Principal from "../../componentes/Principal/Principal";
 
 function PaginaInicial() {
@@ -20,6 +21,8 @@ function PaginaInicial() {
       <BotaoCustomizado aoClicar={() => alert("Enviar clicado!")}>
         Enviar
       </BotaoCustomizado>
+
+      <OlaMundo />
     </Principal>
   );
 }
