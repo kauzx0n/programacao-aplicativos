@@ -23,6 +23,7 @@ function PaginaInicial() {
       </BotaoCustomizado>
 
       <OlaMundo />
+      
     </Principal>
   );
 }
