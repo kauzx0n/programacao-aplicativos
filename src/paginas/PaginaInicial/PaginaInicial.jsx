@@ -1,6 +1,10 @@
 import BotaoCustomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
 import OlaMundo from "../../componentes/OlaMundo/OlaMundo";
 import Principal from "../../componentes/Principal/Principal";
+import DiaAtual from "../../componentes/DiaAtual/DiaAtual";
+import MesAtual from "../../componentes/MesAtual/MesAtual";
+
+
 
 function PaginaInicial() {
   return (
@@ -24,6 +28,8 @@ function PaginaInicial() {
 
       <OlaMundo />
       
+      <DiaAtual />
+      <MesAtual />
     </Principal>
   );
 }
