@@ -1,35 +1,39 @@
 import BotaoCustomizado from "../../componentes/BotaoCustomizado/BotaoCustomizado";
-import OlaMundo from "../../componentes/OlaMundo/OlaMundo";
 import Principal from "../../componentes/Principal/Principal";
-import DiaAtual from "../../componentes/DiaAtual/DiaAtual";
-import MesAtual from "../../componentes/MesAtual/MesAtual";
 
-
+import { useNavigate } from "react-router-dom";
 
 function PaginaInicial() {
+  const navigate = useNavigate();
+
   return (
-    <Principal>
-      Conteúdo principal
-      <BotaoCustomizado
+    <Principal titulo="Página Inicial">
+    <BotaoCustomizado
         tipo="primario"
-        aoClicar={() => alert("Salvar clicado!")}
+        aoClicar={() => navigate("/lista-produtos")}
       >
-        Salvar
+        Lista de Produtos
+      </BotaoCustomizado>
+
+    <BotaoCustomizado
+        tipo="secundario"
+        aoClicar={() => navigate("/fuscao-preto")}
+      >
+        Lista de Tarefas
+      </BotaoCustomizado>
+
+    <BotaoCustomizado
+        tipo="primario"
+        aoClicar={() => navigate("/cadastro-cliente")}
+      >
+        Cadastro de Cliente
       </BotaoCustomizado>
       <BotaoCustomizado
         tipo="secundario"
-        aoClicar={() => alert("Cancelar clicado!")}
+        aoClicar={() => navigate("/lista-clientes")}
       >
-        Cancelar
+        Lista de Clientes
       </BotaoCustomizado>
-      <BotaoCustomizado aoClicar={() => alert("Enviar clicado!")}>
-        Enviar
-      </BotaoCustomizado>
-
-      <OlaMundo />
-      
-      <DiaAtual />
-      <MesAtual />
     </Principal>
   );
 }
